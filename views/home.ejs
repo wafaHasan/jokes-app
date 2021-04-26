@@ -1,0 +1,28 @@
+<%- include('./layout/header') %>
+
+    <% data.forEach(data=>{ %>
+        <div>
+            <p>
+                <%=data.number%>
+            </p>
+            <h2>
+                <%=data.type%>
+            </h2>
+            <h3>
+                <%=data.setup%>
+            </h3>
+            <h4>
+                <%=data.punchline%>
+            </h4>
+
+            <form action="/save" method="POST">
+            <input type="hidden" name="number" value="<%=data.number%>">
+            <input type="hidden" name="type" value="<%=data.type%>">
+            <input type="hidden" name="setup" value="<%=data.setup%>">
+            <input type="hidden" name="punchline" value="<%=data.punchline%>">
+            <button type="submit">save</button>
+            </form>
+
+        </div>
+
+        <%})%>

@@ -1,0 +1,13 @@
+main{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+div{
+    width: 300px;
+    height: 300px;
+    border: 2px solid aqua;
+    text-align: center;
+    margin: 2%;
+}
